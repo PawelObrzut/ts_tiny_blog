@@ -12,6 +12,7 @@ h1 {
 }
 
 .postTitle {
+  width: 100%;
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -29,7 +30,7 @@ h1 {
 .postBody {
   padding: 0 1rem;
   background-color: #fff;
-  display: block;
+  max-height: 0;
   overflow: hidden;
   transition: 0.2s ease-out;
 }
@@ -38,4 +39,32 @@ h1 {
    height: 1.5rem;
    padding: 1rem;
    overflow-y: scroll;
+}
+
+
+.myclass-enter {
+  max-height: 0;
+}
+
+.myclass-enter-active {
+  max-height: 20rem;
+  transition: max-height 500ms ease-in;
+}
+
+.myclass-enter-done {
+  max-height: 20rem;
+}
+
+
+.myclass-exit {
+  max-height: 20rem;
+}
+
+.myclass-exit-active {
+  max-height: 0;
+  transition: max-height 500ms ease-out;
+}
+
+.myclass-exit-done {
+  max-height: 0;
 }
