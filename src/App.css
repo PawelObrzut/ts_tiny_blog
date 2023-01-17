@@ -35,36 +35,29 @@ h1 {
   transition: 0.2s ease-out;
 }
 
-.postBody:target {
-   height: 1.5rem;
-   padding: 1rem;
-   overflow-y: scroll;
-}
-
-
-.myclass-enter {
+.postBodyAccodion-enter {
   max-height: 0;
 }
 
-.myclass-enter-active {
+.postBodyAccodion-enter-active {
   max-height: 20rem;
   transition: max-height 500ms ease-in;
 }
 
-.myclass-enter-done {
+.postBodyAccodion-enter-done {
   max-height: 20rem;
 }
 
 
-.myclass-exit {
+.postBodyAccodion-exit {
   max-height: 20rem;
 }
 
-.myclass-exit-active {
+.postBodyAccodion-exit-active {
   max-height: 0;
   transition: max-height 500ms ease-out;
 }
 
-.myclass-exit-done {
+.postBodyAccodion-exit-done {
   max-height: 0;
 }
