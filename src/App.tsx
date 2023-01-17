@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { IPost } from './types';
-import { ListOfPosts } from './components/ListOfPosts';
+import { PostProps } from './types';
 import { Section } from './components/Section';
 
 function App() {
-  const [posts, setPosts] = useState<IPost[]>([{} as IPost]);
+  const [posts, setPosts] = useState<PostProps[]>([{} as PostProps]);
   const sections = ['crime', 'mystery', 'magical', 'fiction', 'classic'];
 
   const getAllPosts = () => {
@@ -28,10 +27,9 @@ function App() {
     <>
       <main>
         {sections.map(section => (
-          <Section section={section} key={section} />
+          <Section posts={posts} section={section} key={section} />
         ))}
       </main>
-      <ListOfPosts posts={posts} />
     </>
   );
 }

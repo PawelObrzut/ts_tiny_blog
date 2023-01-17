@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { CSSTransition } from 'react-transition-group';
-import { IPost } from '../types';
+import { PostProps } from '../types';
 import { HashTags } from './HashTags';
 
-export const Post = ({ post } : { post: IPost }): JSX.Element => {
+export const Post = ({ post } : { post: PostProps }): JSX.Element => {
   const [isOpen, setOpen] = useState(false);
   const classTaker = useRef(null);
 
@@ -23,6 +23,7 @@ export const Post = ({ post } : { post: IPost }): JSX.Element => {
             <section className="postBody" ref={classTaker}>
               <p>{ post.body }</p>
               <HashTags tags={post.tags} />
+              <p></p>
             </section>
           </CSSTransition>
         </article>

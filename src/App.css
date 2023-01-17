@@ -13,8 +13,8 @@ h1 {
 
 .postTitle {
   width: 100%;
-  background-color: #eee;
-  color: #444;
+  background-color: rgba(238, 238, 238, 0.6);
+
   cursor: pointer;
   padding: 1rem;
   border: none;
@@ -24,15 +24,16 @@ h1 {
 }
 
 .postTitleActive, .postTitle:hover {
-  background-color: #ccc; 
+  background-color: rgba(204, 204, 204, 0.9); 
 }
 
 .postBody {
   padding: 0 1rem;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   max-height: 0;
   overflow: hidden;
   transition: 0.2s ease-out;
+  text-align: left;
 }
 
 .postBodyAccodion-enter {
@@ -64,7 +65,6 @@ h1 {
 
 .tagSection {
   text-align: center;
-  border: solid 0.01rem #000;
   border-radius: 0.5rem;
   width: 85%;
   margin: 1.5rem auto;

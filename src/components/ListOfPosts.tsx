@@ -1,14 +1,12 @@
-import { IPost } from '../types';
+import { PostProps, ListOfPostsProps } from '../types';
 import { Post } from './Post';
 
-type ListOfPostsProps = {
-  posts: IPost[]
-};
-
-export const ListOfPosts = ({ posts } : ListOfPostsProps): JSX.Element => (
+export const ListOfPosts = ({ posts, section } : ListOfPostsProps): JSX.Element => (
     <ul className="postsContainer">
-      {posts.map((post: IPost, index:number) => (
-        <Post post={post} key={index} />
-      ))}
+      {posts
+        .filter(post => post.tags?.includes(section))
+        .map((post: PostProps, index:number) => (
+          <Post post={post} key={index} />
+        ))}
     </ul>
 );

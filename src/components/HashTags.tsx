@@ -5,7 +5,7 @@ type HashTagsProps = {
 export const HashTags = ({ tags } : HashTagsProps): JSX.Element => (
     <>
      {tags?.map(tag => (
-       <span key={tag}>#{tag} </span>
+       <em key={tag}>#{tag} </em>
      ))}
     </>
 );
