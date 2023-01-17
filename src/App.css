@@ -1,7 +1,7 @@
-h1 {
-  text-align: center;
-}
-
+/* 
+ * Post section
+ * styles post's title and body
+*/
 .postsContainer {
   padding: 0.5rem;
 }
@@ -35,23 +35,66 @@ h1 {
   transition: 0.2s ease-out;
   text-align: left;
 }
+/* 
+ * CSS Transition for 
+ * dropdown transition in sections
+ */
+
+.listOfPostsWrapper {
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: scroll;
+  transition: 0.2s ease-out;
+  text-align: left;
+}
+
+.dropdownTheList-enter {
+  max-height: 0;
+}
+
+.dropdownTheList-enter-active {
+  max-height: 100vh;
+  transition: max-height 500ms ease-in;
+}
+
+.dropdownTheList-enter-done {
+  max-height: 100vh;
+}
+
+.dropdownTheList-exit {
+  max-height: 100vh;
+}
+
+.dropdownTheList-exit-active {
+  max-height: 0;
+  transition: max-height 500ms ease-out;
+}
+
+.dropdownTheList-exit-done {
+  max-height: 0;
+}
+
+/* 
+ * CSSTransition classes for 
+ * acordion transition of postBody
+*/
 
 .postBodyAccodion-enter {
   max-height: 0;
 }
 
 .postBodyAccodion-enter-active {
-  max-height: 20rem;
+  max-height: 100vh;
   transition: max-height 500ms ease-in;
 }
 
 .postBodyAccodion-enter-done {
-  max-height: 20rem;
+  max-height: 100vh;
 }
 
 
 .postBodyAccodion-exit {
-  max-height: 20rem;
+  max-height: 100vh;
 }
 
 .postBodyAccodion-exit-active {
@@ -63,21 +106,28 @@ h1 {
   max-height: 0;
 }
 
+/* 
+ * Welcome Page with 5 sections
+*/
+
 .tagSection {
   text-align: center;
   border-radius: 0.5rem;
   width: 85%;
   margin: 1.5rem auto;
   padding: 2rem 0;
-  cursor: pointer;
+  min-height: 12vh;
 }
 
 .tagSection h2 {
-  font-size: 2rem;
-  color: #fff;
-  background-color: rgba(210, 210, 210, 0.5);
+  cursor: pointer;
+  border: solid 0.1rem #000;
   width: 30%;
-  margin: 1.5rem auto;
+  margin: 0 auto;
+  color: #fff;
+  background-color: rgba(210, 210, 210, 0.7);
+  padding: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .crime {

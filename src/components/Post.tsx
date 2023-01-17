@@ -15,11 +15,11 @@ export const Post = ({ post } : { post: PostProps }): JSX.Element => {
             {post.title}
           </button>
           <CSSTransition
-              nodeRef={classTaker}
-              in={isOpen}
-              timeout={500}
-              classNames="postBodyAccodion"
-            >
+            nodeRef={classTaker}
+            in={isOpen}
+            timeout={500}
+            classNames="postBodyAccodion"
+          >
             <section className="postBody" ref={classTaker}>
               <p>{ post.body }</p>
               <HashTags tags={post.tags} />
