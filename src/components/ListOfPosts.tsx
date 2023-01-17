@@ -1,9 +1,13 @@
 import { IPost } from '../types';
 import { Post } from './Post';
 
-export const ListOfPosts = (posts: IPost[]): JSX.Element => (
+type ListOfPostsProps = {
+  posts: IPost[]
+};
+
+export const ListOfPosts = ({ posts } : ListOfPostsProps): JSX.Element => (
     <ul className="postsContainer">
-      {posts.map((post: IPost, index) => (
+      {posts.map((post: IPost, index:number) => (
         <Post post={post} key={index} />
       ))}
     </ul>

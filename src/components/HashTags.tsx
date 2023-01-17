@@ -1,8 +1,8 @@
-interface TagsProps {
+type HashTagsProps = {
   tags: string[]
-}
+};
 
-export const Tags = ({ tags } : TagsProps): JSX.Element => (
+export const HashTags = ({ tags } : HashTagsProps): JSX.Element => (
     <>
      {tags?.map(tag => (
        <span key={tag}>#{tag} </span>

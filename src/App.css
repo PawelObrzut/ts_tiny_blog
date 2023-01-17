@@ -61,3 +61,51 @@ h1 {
 .postBodyAccodion-exit-done {
   max-height: 0;
 }
+
+.tagSection {
+  text-align: center;
+  border: solid 0.01rem #000;
+  border-radius: 0.5rem;
+  width: 85%;
+  margin: 1.5rem auto;
+  padding: 2rem 0;
+  cursor: pointer;
+}
+
+.tagSection h2 {
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(210, 210, 210, 0.5);
+  width: 30%;
+  margin: 1.5rem auto;
+}
+
+.crime {
+  background-image: url('./tagImages/crimeTag.jpeg');
+  background-position: top;
+  background-size: cover;
+}
+
+.mystery {
+  background-image: url('./tagImages/mysteryTag.jpeg');
+  background-position: top;
+  background-size: cover;
+}
+
+.magical {
+  background-image: url('./tagImages/magicalTag.jpeg');
+  background-position: top;
+  background-size: cover;
+}
+
+.fiction {
+  background-image: url('./tagImages/fictionTag.jpeg');
+  background-position: top;
+  background-size: cover;
+}
+
+.classic {
+  background-image: url('./tagImages/classicTag.jpeg');
+  background-position: top;
+  background-size: cover;
+}

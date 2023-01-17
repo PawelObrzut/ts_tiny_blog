@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { IPost } from './types';
 import { ListOfPosts } from './components/ListOfPosts';
+import { Section } from './components/Section';
 
 function App() {
   const [posts, setPosts] = useState<IPost[]>([{} as IPost]);
+  const sections = ['crime', 'mystery', 'magical', 'fiction', 'classic'];
 
   const getAllPosts = () => {
     fetch('http://localhost:8080/api/posts')
@@ -15,7 +17,7 @@ function App() {
         return response.json();
       })
       .then(data => setPosts(data.posts))
-      .catch(error => console.log(error));
+      .catch(error => error);
   };
 
   useEffect(() => {
@@ -24,10 +26,12 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>Tiny Posts Blog</h1>
-        {ListOfPosts(posts)}
-      </header>
+      <main>
+        {sections.map(section => (
+          <Section section={section} key={section} />
+        ))}
+      </main>
+      <ListOfPosts posts={posts} />
     </>
   );
 }
