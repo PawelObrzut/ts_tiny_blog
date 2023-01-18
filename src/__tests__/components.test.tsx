@@ -1,8 +1,17 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import fetchMock from 'jest-fetch-mock';
 import { screen, render, fireEvent } from '@testing-library/react';
 import { Section } from '../components/Section';
 import { ListOfPosts } from '../components/ListOfPosts';
 import { Post } from '../components/Post';
+import App from '../App';
+
+fetchMock.enableMocks();
+
+beforeEach(() => {
+  fetchMock.resetMocks();
+});
 
 describe('Component: ', () => {
   const posts = [
@@ -32,19 +41,19 @@ describe('Component: ', () => {
     },
   ];
 
-  test('SECTION - renders a section to the screen with "section" prop value in h2 tag', () => {
+  test('SECTION - should render a section to the screen with "section" prop value in h2 tag', () => {
     render(<Section section="test" posts={posts}/>);
     expect(screen.getByText('#test')).toBeTruthy();
     expect(screen.getByText('#test')).toBeInTheDocument();
   });
 
-  test('LISTOFPOSTS - renders correct posts filtered by section and corresponding tags', () => {
+  test('LISTOFPOSTS - should render correct posts filtered by section and corresponding tags', () => {
     render(<ListOfPosts section="american" posts={posts}/>);
     expect(screen.getByTestId('postsContainer')).toBeTruthy();
     expect(screen.getAllByTestId('postItem')).toHaveLength(1);
   });
 
-  test('POST - shows post body text after clicking the post title', () => {
+  test('POST - should show post body text after clicking the post title', () => {
     render(<Post post={posts[0]}/>);
     expect(screen.getByText('He was an expert but not in a discipline')).toBeVisible();
     const openButton = screen.getByTestId('postTitleBtn');
@@ -52,5 +61,14 @@ describe('Component: ', () => {
     expect(postBody).not.toHaveClass('postBodyAccodion-enter postBodyAccodion-enter-active');
     fireEvent.click(openButton);
     expect(postBody).toHaveClass('postBodyAccodion-enter postBodyAccodion-enter-active');
+  });
+
+  test('APP - getAllPosts function should perform fetch request', async () => {
+    fetchMock.mockResponseOnce(JSON.stringify({ posts }));
+    const { findByTestId, findByText } = render(<App />);
+    const mainTitle = await findByTestId('mainTitle');
+    const sectionFiction = await findByText('#fiction');
+    expect(mainTitle).toBeInTheDocument();
+    expect(sectionFiction).toBeInTheDocument();
   });
 });
