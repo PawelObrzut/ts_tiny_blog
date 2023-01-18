@@ -1,5 +1,9 @@
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
 /* 
- * Post section
+ * Post Item
  * styles post's title and body
 */
 .postsContainer {
@@ -111,17 +115,21 @@
 */
 
 .tagSection {
+  cursor: pointer;
   text-align: center;
   border-radius: 0.5rem;
   width: 85%;
   margin: 1.5rem auto;
   padding: 2rem 0;
   min-height: 12vh;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.tagSection:hover {
+  box-shadow: rgba(100, 70, 255, 0.4) 0px 2px 4px, rgba(100, 70, 255, 0.3) 0px 7px 13px -3px, rgba(100, 70, 255, 0.2) 0px -3px 0px inset;
 }
 
 .tagSection h2 {
-  cursor: pointer;
-  border: solid 0.1rem #000;
   width: 30%;
   margin: 0 auto;
   color: #fff;
@@ -132,30 +140,30 @@
 
 .crime {
   background-image: url('./tagImages/crimeTag.jpeg');
-  background-position: top;
+  background-position: center;
   background-size: cover;
 }
 
 .mystery {
   background-image: url('./tagImages/mysteryTag.jpeg');
-  background-position: top;
+  background-position: center;
   background-size: cover;
 }
 
 .magical {
   background-image: url('./tagImages/magicalTag.jpeg');
-  background-position: top;
+  background-position: center;
   background-size: cover;
 }
 
 .fiction {
   background-image: url('./tagImages/fictionTag.jpeg');
-  background-position: top;
+  background-position: center;
   background-size: cover;
 }
 
 .classic {
   background-image: url('./tagImages/classicTag.jpeg');
-  background-position: top;
+  background-position: center;
   background-size: cover;
 }

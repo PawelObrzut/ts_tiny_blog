@@ -26,6 +26,7 @@ function App() {
   return (
     <>
       <main>
+        <h1>Tiny Blog</h1>
         {sections.map(section => (
           <Section posts={posts} section={section} key={section} />
         ))}

@@ -13,9 +13,14 @@ export const Section = ({ section, posts } : SectionProps) => {
   const [isOpen, setOpen] = useState(false);
   const classTaker = useRef(null);
 
+  const openListOfPosts = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    event.stopPropagation();
+    setOpen(!isOpen);
+  };
+
   return (
-    <section className={`${section} tagSection`} >
-      <h2 onClick={() => setOpen(!isOpen)}>#{section}</h2>
+    <section className={`${section} tagSection`} onClick={openListOfPosts}>
+      <h2>#{section}</h2>
       <CSSTransition
         nodeRef={classTaker}
         in={isOpen}

@@ -8,10 +8,15 @@ export const Post = ({ post } : { post: PostProps }): JSX.Element => {
   const [isOpen, setOpen] = useState(false);
   const classTaker = useRef(null);
 
+  const openPostBody = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    event.stopPropagation();
+    setOpen(!isOpen);
+  };
+
   return (
     <li className="postItem">
         <article>
-          <button className={isOpen ? 'postTitle postTitleActive' : 'postTitle'} onClick={() => setOpen(!isOpen)}>
+          <button className={isOpen ? 'postTitle postTitleActive' : 'postTitle'} onClick={openPostBody}>
             {post.title}
           </button>
           <CSSTransition
