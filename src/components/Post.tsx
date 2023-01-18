@@ -14,9 +14,9 @@ export const Post = ({ post } : { post: PostProps }): JSX.Element => {
   };
 
   return (
-    <li className="postItem">
+    <li className="postItem" data-testid="postItem">
         <article>
-          <button className={isOpen ? 'postTitle postTitleActive' : 'postTitle'} onClick={openPostBody}>
+          <button data-testid="postTitleBtn" className={isOpen ? 'postTitle postTitleActive' : 'postTitle'} onClick={openPostBody}>
             {post.title}
           </button>
           <CSSTransition
@@ -25,7 +25,7 @@ export const Post = ({ post } : { post: PostProps }): JSX.Element => {
             timeout={500}
             classNames="postBodyAccodion"
           >
-            <section className="postBody" ref={classTaker}>
+            <section data-testid="postBody" className="postBody" ref={classTaker}>
               <p>{ post.body }</p>
               <HashTags tags={post.tags} />
               <p></p>

@@ -19,7 +19,7 @@ export const Section = ({ section, posts } : SectionProps) => {
   };
 
   return (
-    <section className={`${section} tagSection`} onClick={openListOfPosts}>
+    <section className={`${section} tagSection`} onClick={openListOfPosts} >
       <h2>#{section}</h2>
       <CSSTransition
         nodeRef={classTaker}
