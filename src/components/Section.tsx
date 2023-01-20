@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { CSSTransition } from 'react-transition-group';
 import { PostProps } from '../types';
 import { ListOfPosts } from './ListOfPosts';

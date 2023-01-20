@@ -8,7 +8,7 @@ function App() {
   const sections = ['crime', 'mystery', 'magical', 'fiction', 'classic'];
 
   const getAllPosts = () => {
-    fetch('http://localhost:8080/api/posts')
+    fetch('https://dummyjson.com/posts')
       .then(response => {
         if (!response.ok) {
           throw new Error('failed to fetch posts');

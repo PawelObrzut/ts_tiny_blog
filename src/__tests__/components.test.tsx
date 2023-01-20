@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import fetchMock from 'jest-fetch-mock';
 import { screen, render, fireEvent } from '@testing-library/react';
 import { Section } from '../components/Section';
