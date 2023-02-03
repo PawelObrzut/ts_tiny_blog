@@ -1,14 +1,15 @@
 {
+  "homepage": "http://pawelobrzut.github.io/ts_tiny_blog",
   "name": "ts_tiny_blog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
-    "@testing-library/jest-dom": "^5.16.5",
     "@types/react-transition-group": "^4.4.5",
     "eslint-config-salt-typescript": "^1.0.0",
     "identity-obj-proxy": "^3.0.0",
@@ -22,6 +23,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
@@ -48,6 +51,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "gh-pages": "^5.0.0",
     "jest-fetch-mock": "^3.0.3",
     "ts-jest": "^29.0.5"
   }
