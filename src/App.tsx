@@ -5,7 +5,7 @@ import { Section } from './components/Section';
 
 function App() {
   const [posts, setPosts] = useState<PostProps[]>([{} as PostProps]);
-  const sections = ['crime', 'mystery', 'magical', 'fiction', 'classic'];
+  const sections = ['classic', 'mystery', 'magical', 'fiction', 'crime'];
 
   const getAllPosts = () => {
     fetch('https://dummyjson.com/posts')
