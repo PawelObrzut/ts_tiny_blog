@@ -139,31 +139,31 @@ h1 {
 }
 
 .crime {
-  background-image: url('./tagImages/crimeTag.jpeg');
+  background-image: url('./tagImages/crimeTag.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .mystery {
-  background-image: url('./tagImages/mysteryTag.jpeg');
+  background-image: url('./tagImages/mysteryTag.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .magical {
-  background-image: url('./tagImages/magicalTag.jpeg');
+  background-image: url('./tagImages/magicalTag.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .fiction {
-  background-image: url('./tagImages/fictionTag.jpeg');
+  background-image: url('./tagImages/fictionTag.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .classic {
-  background-image: url('./tagImages/classicTag.jpeg');
+  background-image: url('./tagImages/classicTag.jpg');
   background-position: center;
   background-size: cover;
 }
