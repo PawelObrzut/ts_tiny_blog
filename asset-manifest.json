@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ts_tiny_blog/static/css/main.b8f08606.css",
+    "main.js": "/ts_tiny_blog/static/js/main.fcb61f42.js",
+    "static/media/classicTag.jpg": "/ts_tiny_blog/static/media/classicTag.ddc7c416edfc3de6cba1.jpg",
+    "static/media/mysteryTag.jpg": "/ts_tiny_blog/static/media/mysteryTag.0abb64be2ae61e6e412a.jpg",
+    "static/media/fictionTag.jpg": "/ts_tiny_blog/static/media/fictionTag.7651e5ca6f14b0aa62e7.jpg",
+    "static/media/magicalTag.jpg": "/ts_tiny_blog/static/media/magicalTag.86cc64be00ab0f1217d5.jpg",
+    "static/media/crimeTag.jpg": "/ts_tiny_blog/static/media/crimeTag.e90ce6dfb37c660ca502.jpg",
+    "index.html": "/ts_tiny_blog/index.html",
+    "main.b8f08606.css.map": "/ts_tiny_blog/static/css/main.b8f08606.css.map",
+    "main.fcb61f42.js.map": "/ts_tiny_blog/static/js/main.fcb61f42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8f08606.css",
+    "static/js/main.fcb61f42.js"
+  ]
+}
